@@ -1,0 +1,121 @@
+/* Estilos padrão (modo claro) */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.calculator {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#display {
+  width: 80%;
+  height: 45px;
+  font-size: 1.5em;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #d4d4d4;
+}
+
+button:nth-child(4n+4) { /* Operadores */
+  background-color: #f9a825;
+  color: white;
+}
+
+button:nth-child(4n+4):hover {
+  background-color: #f57c00;
+}
+
+button:nth-child(16) { /* Botão igual */
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:nth-child(16):hover {
+  background-color: #45a049;
+}
+
+/* Estilos para o modo escuro */
+body.dark {
+  background-color: #333;
+}
+
+body.dark .calculator {
+  background-color: #444;
+}
+
+body.dark #display {
+  background-color: #555;
+  color: white;
+}
+
+body.dark button {
+  background-color: #666;
+  color: white;
+}
+
+body.dark button:hover {
+  background-color: #777;
+}
+
+body.dark button:nth-child(4n+4) {
+  background-color: #f9c825;
+}
+
+body.dark button:nth-child(4n+4):hover {
+  background-color: #f7b000;
+}
+
+body.dark button:nth-child(16) {
+  background-color: #4CAF50;
+}
+
+body.dark button:nth-child(16):hover {
+  background-color: #45a049;
+}
+
+#theme-toggle {
+  width: 40px; /* Define a largura do botão */
+  height: 20px; /* Define a altura do botão */
+  font-size: 1.5em; /* Ajusta o tamanho da fonte */
+  background-color: transparent; /* Faz o fundo do botão transparente */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+  margin-bottom: 20px; /* Espaço abaixo do botão */
+  border-radius: 50%; /* Torna o botão redondo */
+  transition: background-color 0.2s; /* Transição suave ao mudar de fundo */
+}
+
+#theme-toggle:hover {
+  background-color: #ddd; /* Fundo ao passar o mouse */
+}
